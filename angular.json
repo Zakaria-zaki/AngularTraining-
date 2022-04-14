@@ -80,6 +80,23 @@
           },
           "defaultConfiguration": "development"
         },
+        "o-n": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ng-arab:build",
+            "port": 4500,
+            "open": true
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng-arab:build:production"
+            },
+            "development": {
+              "browserTarget": "ng-arab:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -103,9 +120,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "ng-arab"
+  "defaultProject": "ng-arab",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
