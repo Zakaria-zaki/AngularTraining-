@@ -6,21 +6,13 @@ import {ItemDetailsComponent} from "../item-details/item-details.component";
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.scss']
 })
-export class ItemComponent implements OnInit {
+export class ItemComponent{
 
-  itemTitle: string = '';
-
-  @ViewChild('myChild')
-  title?: ItemDetailsComponent;
+  title: string;
 
   constructor() {
-    setTimeout( () => {
-      this.title?.seTitle('my Title');
-    }, 3000);
   }
 
-  ngOnInit(): void {
-  }
 
 
 }

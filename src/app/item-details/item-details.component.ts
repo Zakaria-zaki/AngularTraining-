@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-item-details',
@@ -8,12 +8,14 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ItemDetailsComponent {
 
   @Input()
-  itemTitle: string;
+  title: string = '';
 
-  constructor() { }
+  @Output()
+  titleChange: EventEmitter<string> = new EventEmitter<string>();
 
-  seTitle(title: string) {
-    console.log('Im in child and title is', title);
+  constructor() {
   }
+
+
 
 }

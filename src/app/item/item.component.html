@@ -1,4 +1,9 @@
 <p>item works!</p>
-<input type="text" (keyup)=" itemTitle = $event.target.value">
+<input type="text" (keyup)=" title = $event.target.value" [value]="title">
+
+data from child is {{ title }}
+<hr>
 <app-item-details
-[itemTitle]="itemTitle" #myChild></app-item-details>
+  [(title)]="title"
+></app-item-details>
+
