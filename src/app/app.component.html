@@ -1,1 +1,18 @@
 <app-item></app-item>
+
+{{ $any(item  ).name }}
+
+
+<svg>
+  <g>
+    <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    [attr.fill] = "color"
+    (click)="changeColor()"
+    ></rect>
+    <text> Click to change color  </text>
+  </g>
+</svg>
